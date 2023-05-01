@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+body {
+    margin: 5%;
+    padding: 0;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+            "logo somos somos"
+            "producto1 producto2 producto3";
+    gap: 110px 25px;
+
+}
+
+.logo {
+    grid-area:logo;
+}
+
+.somos {
+    grid-area:somos;
+    align-self: center;
+}
+.somos h1 {
+    color: rgb(235, 212, 105);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+.somos hr {
+    border-color: gold;
+}
+
+.somos p {
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.producto1 {
+    grid-area: producto1;
+    justify-self:center;
+}
+
+.producto1 img {
+    width: 250px;
+    height: auto;
+}
+
+.producto2 {
+    grid-area: producto2;
+    justify-self: center;
+}
+
+.producto2 img {
+    width: 250px;
+    height: auto;
+}
+
+.producto3 {
+    grid-area: producto3;
+    justify-self: center;
+}
+
+.producto3 img {
+    width: 250px;
+    height: auto;
+}
+
+@media only screen and (max-width: 575px){
+    #contenedor {
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+                "somos"
+                "producto1" 
+                "producto2" 
+                "producto3";
+        gap: 50px 25px;
+        justify-content: flex-start;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 575px){
+    #contenedor {
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+                "somos"
+                "producto1" 
+                "producto2" 
+                "producto3";
+        gap: 50px 25px;
+        justify-content: flex-start;
+    }
+
+    .logo img {
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    #contenedor {
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+                "somos"
+                "producto1" 
+                "producto2" 
+                "producto3";
+        gap: 50px 25px;
+        justify-content: flex-start;
+    }
+
+    .logo img {
+        display: none;
+    }
+    
+}
